@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="author" content="arati">
+  <meta charset="utf-8"/>
+	<title>Research</title>
+  <!-----<style tag>used for styling the page,text,images and navigationbar/internal css--->
+  <!----*style*= inline css-->
+  <!---script tag used for the change on content with image--->
+  <script>
+    var image_tracker='f'
+    function change(){
+      var image = document.getElementById('home')
+      if(image_tracker=='f'){
+        image.src="home.jpg";
+        image_tracker='t';
+        }else{
+          image.src="homepagecapture.jpg";
+          image_tracker='f';
+           }
+      }
+    var image_tracker='i'
+    function flip(){
+      var image = document.getElementById('cv')
+      if(image_tracker=='i'){
+        image.src="cv.jpg";
+        image_tracker='o';
+        }else{
+          image.src="cvpagecapture.jpg";
+          image_tracker='i';
+           }
+      }
+        var image_tracker='s'
+        function change1(){
+      var image = document.getElementById('blog')
+      if(image_tracker=='s'){
+        image.src="blog1cap.jpg";
+        image_tracker='a';
+        }else{
+          image.src="blogcapture1.jpg";
+          image_tracker='s';
+           }
+      }
+       var image_tracker='p'
+        function rotate(){
+      var image = document.getElementById('contact')
+      if(image_tracker=='p'){
+        image.src="contact.jpg";
+        image_tracker='n';
+        }else{
+          image.src="contactpagecapture.jpg";
+          image_tracker='p';
+           }
+      }
+      var image_tracker='p'
+      function rotate1(){
+      var image = document.getElementById('research')
+      if(image_tracker=='p'){
+        image.src="nav.jpg";
+        image_tracker='n';
+        }else{
+          image.src="research1.jpg";
+          image_tracker='p';
+           }
+      }
+
+  </script>
+	<style>
+body{
+	margin: 0;
+	padding: 0;
+	background-image: url(Research.jpg);
+  min-height: 2200px;
+  z-index: -1;
+}
+* {
+  box-sizing:border-box;
+  font-family:"Roboto";
+}
+.header {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:55px;
+}
+.header .toggle-btn {
+  position:absolute;
+  right:10px;
+  width:55px;
+  hright:55px;
+  cursor:pointer;
+}
+.header span {
+  position:relative;
+  top:0px;
+  display:block;
+  background:#fff;
+  width:80%;
+  height:5px;
+  margin:10px 0px;
+}
+.header .toggle-btn.active span:nth-child(1) {
+  top:15px;
+  transform:rotate(45deg);
+  transition:top 200ms ease-in-out 0ms,transform 250ms ease-in-out 150ms;
+}
+.header .toggle-btn.active span:nth-child(3) {
+  top:-15px;
+  transform:rotate(-45deg);
+  transition:top 200ms ease-in-out 0ms,transform 250ms ease-in-out 150ms;
+}
+.header .toggle-btn.active span:nth-child(2) {
+  opacity:0;
+  transition:opacity 50ms ease-in-out 150ms;
+}
+.header .toggle-btn span:nth-child(1),
+.header .toggle-btn span:nth-child(3) {
+  transition:transform 250ms ease-in-out 0ms,top 200ms ease-in-out 150ms;
+}
+.header .toggle-btn span:nth-child(2) {
+  opacity:1;
+  transition:opacity 50ms ease-in-out 200ms;
+}
+.sidebar {
+  position:fixed;
+  top:55px;
+  right: -100%;
+  width:20%;
+  height:calc(100% -3px;);
+  background:#F08080;
+  padding:15px;
+  opacity:0;
+  transition:all 450ms ease-in-out;
+}
+.sidebar .item {
+  font-size:18px;
+  color:##FFA500;
+  font-weight:300;
+  text-transform:uppercase;
+  padding:12px 5px;
+  border-bottom:1px solid ##8B0000;
+  cursor:pointer;
+}
+.sidebar.active {
+  opacity:1;
+  right:0px;
+}
+.heading{
+	color: #000000;;
+	font-weight: bold;
+  text-shadow: 0 0 20px #ff00cc;
+  position: absolute;
+	font-size: 70px;
+	top: 13%;
+  left: 37%;
+	font-family: "Lucida Console",Monaco,monospace;
+}
+.section-light{
+  padding:30px 80px;
+  margin-top: 30%;
+  background-color:#f4f4f4;
+  color:#666;
+}
+h1{
+  text-align: center;
+  font-size: 20px;
+  font-family: cursive;
+  
+}
+.section{
+  padding:30px 80px;
+  margin-top:5%;
+  background-color:#f4f4f4;
+  color:#666;
+}
+h2{
+  text-align: center;
+  font-size: 20px;
+  font-family: cursive;
+  
+}
+.next-section{
+  padding:30px 80px;
+  margin-top:5%;
+  background-color:#f4f4f4;
+  color:#666;
+}
+h3{
+  text-align: center;
+  font-size: 20px;
+  font-family: cursive;
+  
+}
+.contact{
+  padding:30px 80px;
+  margin-top:5%;
+  background-color:#f4f4f4;
+  color:#666;
+}
+h4{
+  text-align: center;
+  font-size: 20px;
+  font-family: cursive;
+  }
+
+</style>
+
+</head>
+<body>
+	<div class="header">                                               <!-----div class for the toggle button-->
+  <div class="toggle-btn" onclick="toggleSidebar(this);">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<div class="sidebar" id="sidebar">
+  <div class="item"><a href="home page.html">Home</a></div>
+    <div class="item"><a href="CV.html">Portfolio</a></div>           <!----calling html file for the navigation bar--->
+    <div class="item"><a href="blog.html">Blog</a></div>
+    <div class="item"><a href="#">Research</a></div>
+    <div class="item"><a href="contact page.html">Contact</a></div>
+</div>
+<div class="heading">Research</div>
+
+<section class=" section-light">
+  <h1>Source taken for home page</h1>
+  <center>
+  <img src="homepagecapture.jpg" style="height:150px; width: 250px;">
+</center>
+<p style="font-size:20px">
+  So, basically this is the home page of my blog that has a video background and a logo with fading navigation and some text.Video can be found from youbute. &nbsp;<a href="https://www.youtube.com/watch?v=v0KIK7ckH2c">Go to the youtube site for video</a>.&nbsp; Beside that it's all the code. And for the navigation bar it was taken as a reference from another webpage.
+  
+  
+  </p>
+  </section>
+  <section class=" section">
+    <h2>Source taken for Portfolio page</h2>
+    <center>
+      <img src="cvpagecapture.jpg" style="height: 150px; width: 250px;">
+    </center>
+    <p style="font-size: 20px">
+      In portfolio page as you can see page is divided into different section where in one side navigation bar is shown and my photo with some text is shown. The layout for this webpage is taken as a guide from the another webpage. The side ways navigation bar made with toggle button which slides and shows the content when clicked on the button. It is also called hamburger nav bar.
+    </p>
+    </section>
+    <section class="next-section">
+      <h3>Source taken for blog page</h3>
+      <center>
+        <img src="blogcapture1.jpg" style="height: 150px; width: 250px;">
+      </center>
+      <p style="font-size: 20px;">
+         The background picture was taken from &nbsp;<a href="https://www.physioguru.com/physiotherapy-blog/research-physiotherapy-blog/44-getting-started-with-research">For background picture</a> &nbsp; and it's same navigation as shown in portfolio page and down some text can be seen and this layout has been taken as a reference from another webpage.
+      </p>
+    </section>
+    <section class="contact">
+      <h4>Source taken for contact page</h3>
+      <center>
+        <img src="contactpagecapture.jpg" style="height: 150px; width: 250px;">
+      </center>
+      <p style="font-size: 20px;">
+         The background picture was taken from &nbsp;<a href="https://www.freepik.com/free-photos-vectors/raindrops">For background picture</a> &nbsp; and transparent validation form is made again reference from the another web page. The side navigation bar is same as other webpage that I have made. 
+      </p>
+      <h5 style="line-height: 30px; font-size: 24px; position: absolute; color:blue; left: 15%;">Comparison between different websites that I have taken references of(click on the picture)</h5>
+      
+      <!----div tag for each image to be used---->
+
+      <div>
+      <img src="homepagecapture.jpg" style="height: 150px; width: 250px; position: absolute; top:2200px;" id="home" onclick="change()">
+    </div>
+    <div>
+      <img src="cvpagecapture.jpg" style="height: 150px; width: 250px; position: absolute; top:2200px; left: 40%;" id="cv" onclick="flip()">
+    </div>
+    <div>
+      <img src="blogcapture1.jpg" style="height: 150px; width: 250px; position: absolute; top:2200px; left: 70%;" id="blog" onclick="change1()">
+    </div>
+    <div>
+      <img src="contactpagecapture.jpg" style="height: 150px; width: 250px; position: absolute; top:2400px;" id="contact" onclick="rotate()">
+    </div>
+    <div>
+      <img src="research1.jpg" style="height: 150px; width: 250px; position: absolute; top:2400px; left: 40%;" id="research" onclick="rotate1()">
+    </div>
+
+    <!------using function to use the toggle navigation bar--->
+    <script>
+          function toggleSidebar(ref) {
+  ref.classList.toggle('active');
+  document.getElementById("sidebar").classList.toggle('active');
+}
+    </script>
+  </body>
+  </html>
+  
+  

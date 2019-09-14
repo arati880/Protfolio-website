@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="author" content="arati">
+	<meta charset="utf-8"/>
+	<title>Home</title>
+	                         <!-----<style tag>used for styling the page,text,image and navigation bar/internal css--->
+		                    <!----*style*= inline css-->
+		<style>
+		.container{
+			height: 100%;
+		}
+		.video{
+			width: 100%;
+			height: 100%;
+			top:0;
+			bottom: 0;
+			left: 0;
+			object-fit: cover;
+			position: absolute;
+			z-index: -1;
+
+		}
+		.text{
+			font-family: 'Tangerine',serif;
+			position: absolute;
+			top: 30%;
+			left: 25%;
+			margin: 0;
+			padding: 0 20px;
+			font-size: 45px;
+			color: #ccooff;
+			text-shadow: 0 0 20px #ff005d;
+			filter: blur(2px);
+		}
+		.text1{
+			font-family: 'Tangerine',serif;
+			position: absolute;
+			top: 55%;
+			left: 40%;
+			margin: 0;
+			padding: 0 20px;
+			font-size: 30px;
+			color: #000000;
+			text-shadow: 0 0 20px #ff00cc;
+			filter: blur(1px);
+			font-weight: bold;
+		}
+		ul{
+			position: absolute;
+			top: 5%;
+			left: 40%;
+			display: flex;
+			font-family: sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		ul li{
+			list-style: none;
+			transition: .5s;
+		}
+		ul li a{
+			position: relative;
+			display: block;
+			text-align: center;
+			margin: 0 25px;
+			color: #000000;
+			font-size: 20px;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-weight: bold;
+			}		
+		ul:hover li{
+			opacity: .9;
+			filter: blur(2px);
+		}
+		ul li:hover{
+			opacity: 1;
+			filter: blur(0px);
+			background-color: #808000;
+		}
+		
+	</style>
+</head>
+<body>
+	<header>
+		<div class="container">  
+			<video autoplay loop class="video" muted="true">   <!-----video background for the homepage--->
+				<source src="a2.mp4" type="video/mp4">         <!-----source for the video---->
+				
+			</video>
+			<div class="text">
+				<h1>Welcome to vBlog</h1>	                       <!----created a div for the header--->
+			</div>
+			<div class="text1">
+				<p>-The only limit are those you accept</p>		<!-----another div class for single line text using p tage--->	
+		</div>
+		<ul>	
+					<li><a href="#">Home</a></li>
+					<li><a href="CV.html">CV/Protfolio</a></li>
+					<li><a href="blog.html">Blog</a></li>
+					<li><a href="research.html">Research</a></li>             <!----calling html file for the navigation bar--->
+					<li><a href="contact page.html">Contact</a></li>
+				</ul>
+				<img src="capture.jpg" alt="Website logo" style="height:50px; width:50px;">
+			</div>
+	</header>
+  
+</body>
+</html>
+ 

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="author" content="arati">
+  <meta charset="utf-8"/>
+  <title>CV</title>
+  <!-----<style tag>used for styling the page,text,image and navigation bar/internal css--->
+  <style>
+    body, html{
+  height:100%;
+  margin:0;
+  font-size:16px;
+  font-family:"Lato", sans-serif;
+  font-weight:400;
+  line-height:1.8em;
+  color:#666;
+}
+
+.pimg1, .pimg2, .pimg3, .pimg4{
+  position:relative;
+  opacity:0.70;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+
+  /*
+    fixed = parallax
+    scroll = normal
+  */
+  background-attachment:fixed;
+}
+
+.pimg1{
+  background-image:url('pic1.jpg');
+  min-height:90%;
+}
+
+.pimg2{
+  background-image:url('pic2.jpg');
+  min-height:400px;
+}
+
+.pimg3{
+  background-image:url('pic3.jpg');
+  min-height:400px;
+}
+
+/*
+background image for the parallex effect
+  */
+.pimg4{
+  background-image:url('pic4.jpg');
+  min-height:400px;
+}
+
+.section{
+  text-align:center;
+  padding:50px 80px;
+}
+
+.section-light{
+  background-color:#f4f4f4;
+  color:#666;
+}
+
+.section-dark{
+  background-color:#282e34;
+  color:#ddd;
+}
+
+.ptext{
+  position:absolute;
+  top:60%;
+  width:100%;
+  left:5%;
+  text-align:center;
+  color:#000;
+  font-size:27px;
+  letter-spacing:8px;
+  font-family: cursive;
+}
+
+.ptext .border{
+  background-color:#dfdfdf;
+  color:#000;
+  padding:20px;
+}
+
+@media(max-width:568px){
+  .pimg1, .pimg2, .pimg3{
+    background-attachment:scroll;
+  }
+}
+.header {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:55px;
+}
+.header .toggle-btn {
+  position:absolute;
+  right:10px;
+  width:55px;
+  hright:55px;
+  cursor:pointer;
+}
+.header span {
+  position:relative;
+  top:0px;
+  display:block;
+  background:#fff;
+  width:80%;
+  height:5px;
+  margin:10px 0px;
+}
+.header .toggle-btn.active span:nth-child(1) {
+  top:15px;
+  transform:rotate(45deg);
+  transition:top 200ms ease-in-out 0ms,transform 250ms ease-in-out 150ms;
+}
+.header .toggle-btn.active span:nth-child(3) {
+  top:-15px;
+  transform:rotate(-45deg);
+  transition:top 200ms ease-in-out 0ms,transform 250ms ease-in-out 150ms;
+}
+.header .toggle-btn.active span:nth-child(2) {
+  opacity:0;
+  transition:opacity 50ms ease-in-out 150ms;
+}
+.header .toggle-btn span:nth-child(1),
+.header .toggle-btn span:nth-child(3) {
+  transition:transform 250ms ease-in-out 0ms,top 200ms ease-in-out 150ms;
+}
+.header .toggle-btn span:nth-child(2) {
+  opacity:1;
+  transition:opacity 50ms ease-in-out 200ms;
+}
+.sidebar {
+  position:fixed;
+  top:55px;
+  right: -100%;
+  width:20%;
+  height:calc(100% -0px;);
+  background:#F08080;
+  padding:15px;
+  opacity:0;
+  transition:all 450ms ease-in-out;
+}
+.sidebar .item {
+  font-size:18px;
+  color:##FFA500;
+  font-weight:300;
+  text-transform:uppercase;
+  padding:12px 5px;
+  border-bottom:1px solid ##8B0000;
+  cursor:pointer;
+}
+.sidebar.active {
+  opacity:1;
+  right:0px;
+}
+  </style>
+</head>
+<body>
+  <div class="pimg1">
+    <div class="ptext">
+      <span class="border">
+        Hi!My name is Arati
+      </span>
+    </div>
+  </div>
+  <!----using section tag for creating parallex effect--->
+
+
+  <div class="section section-light">
+    <h2>Who am i?</h2>
+    <p>
+      Hey everyone,I am aarati and thrilled that you stopped by my coner of blogland.By day i am student who is doing her bachelor's currently first year.I live in captical city with my family. Writing a blog is one of my hobby,because ofcourse people have many hobbies. Beside this i like travelling.I have been to few places and hope to travel more in future. My aim is to be an super successful coder, and this is what i dreamed from my childhood. I love pets specially dog's because i think they provide you positive aura in your life. I am an interovert person with good heart.
+    </p>
+  </div>
+
+  <div class="pimg2">
+  </div>
+
+  <div class="section section-dark">
+    <h2>About my studies till date</h2>
+    <p>
+     I have always been average student in my school as well as in my high school. I did my schooling from him rashmi high school located in balaju with distinction(80%) and high school from prime college management with distinction(78%). I was shy and self-observed student when i was in school but changed and became more interactive when i joined my high school. Currently i am doing my bachelor's in information technology speacilizing in computing in islington college that is located in kamalpokhari.
+        </p>
+  </div>
+
+  <div class="pimg3">
+  </div>
+
+  <div class="section section-dark">
+    <h2>Experience</h2>
+    <p>
+      I don't have much of the work experience.I did some social work during massive earthquake that occured in 2072.Beside that i have been to phillipines to attend the hack athon program in manali. There i learned many new things and got to know and interact with lots of new people of seven different countries.This program has become and still is one of the best experience i ever had in my life. 
+      
+    </p>
+  </div>
+
+  <div class="pimg4">
+    <div class="ptext">
+      <span class="border">
+        Thankyou
+      </span>
+    </div>
+  </div>
+  <!----button for the togglesidebar---->
+  <div class="header">
+  <div class="toggle-btn" onclick="toggleSidebar(this);">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<!---div tag calling html file for navigation bar--->
+<div class="sidebar" id="sidebar">
+ 
+        <div class="item"><a href="home page.html">Home</a></div>
+    <div class="item"><a href="#">Portfolio</a></div>
+    <div class="item"><a href="blog.html">Blog</a></div>
+    <div class="item"><a href="research.html">Research</a></div>
+    <div class="item"><a href="contact page.html">Contact</a></div>
+</div>
+<!---fuction to make the toggle bar responsive---->
+<script>
+  function toggleSidebar(ref) {
+  ref.classList.toggle('active');
+  document.getElementById("sidebar").classList.toggle('active');
+}
+</script>
+</body>
+</html>
